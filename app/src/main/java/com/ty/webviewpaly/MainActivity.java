@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         mWebView = findViewById(R.id.web_view);
         mWebView.getSettings().setJavaScriptEnabled(true);
+        // load cache then network is better than load from network only
         mWebView.getSettings().setAppCacheEnabled(true);
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         mWebView.setWebViewClient( new WebViewClient());
